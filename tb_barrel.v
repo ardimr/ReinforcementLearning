@@ -9,7 +9,10 @@ module tb_barrel;
   initial begin
     shift_mag = 4'b0001;
     op = 16'b0000000000000001;
-    #30;
+    #10;
+    shift_mag = 4'b0101;
+    op = 16'b0000000000000101;
+    #10;
     $stop;
   end
 endmodule
