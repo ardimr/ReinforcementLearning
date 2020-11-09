@@ -203,5 +203,6 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
                          .d15(out_ram_15), 
                          .dout(q_value_selected));
 
-//this is
+//this is new
+
 endmodule
