@@ -4,7 +4,7 @@ module action_ram(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
   input en;
   input write_en;
   input[5:0] wr_addr ;
-  input[5:0] rd_addr
+  input[5:0] rd_addr;
   input[15:0] data_in;
 
   output reg[15:0] data_out;

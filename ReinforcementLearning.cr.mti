@@ -1,0 +1,35 @@
+{E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v} {1 {vlog -work work -stats=none {E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\multiplexer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module multiplexer
+
+Top level modules:
+	multiplexer
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Max_Block
+
+Top level modules:
+	Max_Block
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module BarrelShifter
+
+Top level modules:
+	BarrelShifter
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram.v} {1 {vlog -work work -stats=none {E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\action_ram.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module action_ram
+
+Top level modules:
+	action_ram
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v} {0 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Q_learning_acc
+** Error: E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v(201): (vlog-2730) Undefined variable: 'out'.
+** Error: (vlog-13069) E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v(201): near "[": syntax error, unexpected '[', expecting ')'.
+
+} {4.0 6.0} {}}

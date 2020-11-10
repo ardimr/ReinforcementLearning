@@ -10,8 +10,7 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
   input [15:0] result;
 
   //wiring
-  wire[15:0] out_ram_0,
-             out_ram_1,
+  wire[15:0] out_ram_1,
              out_ram_2,
              out_ram_3,
              out_ram_4,
@@ -31,8 +30,7 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
                next_state_addr;
 
     //decoder to ram wire
-    wire en0,
-         en1,
+    wire en1,
          en2,
          en3,
          en4,
@@ -49,23 +47,15 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
          en15;
 
     //new q value wire
-    wire [15:0] new_q_value;
+    reg [15:0] new_q_value;
 
     //wire output mux
     wire[15:0] q_value_selected;
   
     //wire q maximum
-    wire[15:0]  q_max 
+    wire[15:0]  q_max; 
 
   //module instantiation
-   action_ram ram_0(.clk(clk), 
-                   .en(en), 
-                   .wr_addr(state_addr),
-                   .rd_addr(next_state_addr),
-                   .write_en(en0),
-                   .data_in(new_q_value),
-                   .data_out(out_ram_0));
-
     action_ram ram_1(.clk(clk), 
                    .en(en), 
                    .wr_addr(state_addr),
@@ -188,7 +178,6 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
 
     //multiplexer 16 to 1
     multiplexer mux16to1(.sel(action),
-                         .d0(out_ram_0),
                          .d1(out_ram_1),
                          .d2(out_ram_2),
                          .d3(out_ram_3),
@@ -209,40 +198,52 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
 //this is new
     //Decoder
     decode Decoder(.at(action),
-                   .out[0](en0),
-                   .out[1](en1),
-                   .out[2](en2),
-                   .out[3](en3),
-                   .out[4](en4),
-                   .out[5](en5),
-                   .out[6](en6),
-                   .out[7](en7),
-                   .out[8](en8),
-                   .out[9](en9),
-                   .out[10](en10),
-                   .out[11](en11),
-                   .out[12](en12),
-                   .out[13](en13),
-                   .out[14](en14),
-                   .out[15](en15));
+                   .en1(en1),
+                   .en2(en2),
+                   .en3(en3),
+                   .en4(en4),
+                   .en5(en5),
+                   .en6(en6),
+                   .en7(en7),
+                   .en8(en8),
+                   .en9(en9),
+                   .en10(en10),
+                   .en11(en11),
+                   .en12(en12),
+                   .en13(en13),
+                   .en14(en14),
+                   .en15(en15));
   
     //Max_Block
   max_q Max_Block(.clk(clk),
-                  .Q_Act1(out_ram_0),
-                  .Q_Act2(out_ram_1),
-                  .Q_Act3(out_ram_2),
-                  .Q_Act4(out_ram_3),
-                  .Q_Act5(out_ram_4),
-                  .Q_Act6(out_ram_5),
-                  .Q_Act7(out_ram_6),
-                  .Q_Act8(out_ram_7),
-                  .Q_Act9(out_ram_8),
-                  .Q_Act10(out_ram_9),
-                  .Q_Act11(out_ram_10),
-                  .Q_Act12(out_ram_11),
-                  .Q_Act13(out_ram_12),
-                  .Q_Act14(out_ram_13),
-                  .Q_Act15(out_ram_14),
+                  .Q_Act1(out_ram_1),
+                  .Q_Act2(out_ram_2),
+                  .Q_Act3(out_ram_3),
+                  .Q_Act4(out_ram_4),
+                  .Q_Act5(out_ram_5),
+                  .Q_Act6(out_ram_6),
+                  .Q_Act7(out_ram_7),
+                  .Q_Act8(out_ram_8),
+                  .Q_Act9(out_ram_9),
+                  .Q_Act10(out_ram_10),
+                  .Q_Act11(out_ram_11),
+                  .Q_Act12(out_ram_12),
+                  .Q_Act13(out_ram_13),
+                  .Q_Act14(out_ram_14),
+                  .Q_Act15(out_ram_15),
                   .out(q_max));
+    
+    //Q updater
+
+    Qupdater Qupdater(.old_Q(q_value_selected),
+                      .max_Q(q_max),
+                      .gamma(gamma),
+                      .alpha(alpha),
+                      .rt(reward),
+                      .new_Q(result));
+
+    always@(posedge clk) begin
+      new_q_value <= result;
+    end
 
 endmodule
