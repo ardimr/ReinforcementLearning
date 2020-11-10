@@ -204,5 +204,26 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
                          .dout(q_value_selected));
 
 //this is new
+    //Decoder
+    decode Decoder(.at(action),
+                   .out[0](en0),
+                   .out[1](en1),
+                   .out[2](en2),
+                   .out[3](en3),
+                   .out[4](en4),
+                   .out[5](en5),
+                   .out[6](en6),
+                   .out[7](en7),
+                   .out[8](en8),
+                   .out[9](en9),
+                   .out[10](en10),
+                   .out[11](en11),
+                   .out[12](en12),
+                   .out[13](en13),
+                   .out[14](en14),
+                   .out[15](en15));
+  
+    //Max_Block
+    max_q Max_Block
 
 endmodule
