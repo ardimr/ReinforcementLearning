@@ -53,6 +53,9 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
 
     //wire output mux
     wire[15:0] q_value_selected;
+  
+    //wire q maximum
+    wire[15:0]  q_max 
 
   //module instantiation
    action_ram ram_0(.clk(clk), 
@@ -224,6 +227,22 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
                    .out[15](en15));
   
     //Max_Block
-    max_q Max_Block
+  max_q Max_Block(.clk(clk),
+                  .Q_Act1(out_ram_0),
+                  .Q_Act2(out_ram_1),
+                  .Q_Act3(out_ram_2),
+                  .Q_Act4(out_ram_3),
+                  .Q_Act5(out_ram_4),
+                  .Q_Act6(out_ram_5),
+                  .Q_Act7(out_ram_6),
+                  .Q_Act8(out_ram_7),
+                  .Q_Act9(out_ram_8),
+                  .Q_Act10(out_ram_9),
+                  .Q_Act11(out_ram_10),
+                  .Q_Act12(out_ram_11),
+                  .Q_Act13(out_ram_12),
+                  .Q_Act14(out_ram_13),
+                  .Q_Act15(out_ram_14),
+                  .out(q_max));
 
 endmodule
