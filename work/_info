@@ -29,6 +29,27 @@ r1
 !i113 1
 Z3 o-work work
 Z4 tCvgOpt 0
+vaction_ram_tb
+!s110 1604992529
+!i10b 1
+!s100 o9Q2cJBRiLB5lSQO[zKz83
+IFF0GVFD?0DglQhPLg3XB21
+R0
+R1
+w1604992518
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1604992529.000000
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v|
+!i113 1
+R3
+R4
 vBarrelShifter
 !s110 1604977527
 !i10b 1

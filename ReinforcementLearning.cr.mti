@@ -26,10 +26,25 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	action_ram
 
-} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v} {0 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v}
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module action_ram_tb
+
+Top level modules:
+	action_ram_tb
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Decoder
+
+Top level modules:
+	Decoder
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module Q_learning_acc
-** Error: E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v(201): (vlog-2730) Undefined variable: 'out'.
-** Error: (vlog-13069) E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v(201): near "[": syntax error, unexpected '[', expecting ')'.
 
-} {4.0 6.0} {}}
+Top level modules:
+	Q_learning_acc
+
+} {} {}}
