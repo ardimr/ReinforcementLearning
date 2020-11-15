@@ -12,10 +12,9 @@ module action_ram(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
   //Memory Model
   reg[15:0] mem[0:63];
 
-  //read initial memory access
-//   initial begin
-//       $readmemh ("memory_in.list", mem);
-//   end
+  initial begin
+      $readmemh ("memory_in.list", mem);
+  end
   
   always@(posedge clk) begin
       if(!en) begin
