@@ -3,7 +3,7 @@
 module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha, result);
   input clk,en;
   input[3:0] action;
-  input state, next_state; //size?
+  input [5:0] state, next_state; //size?
   input [15:0] reward; 
   input [15:0] gamma;
   input [15:0] alpha;
