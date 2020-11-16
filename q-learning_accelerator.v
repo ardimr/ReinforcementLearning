@@ -177,7 +177,7 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
                    .data_out(out_ram_15));
 
     //multiplexer 16 to 1
-    multiplexer mux16to1(.sel(action),
+    Mux16to1 mux16to1(.sel(action),
                          .d1(out_ram_1),
                          .d2(out_ram_2),
                          .d3(out_ram_3),
@@ -197,7 +197,7 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
 
 //this is new
     //Decoder
-    decode Decoder(.at(action),
+    Decoder Decoder(.at(action),
                    .en1(en1),
                    .en2(en2),
                    .en3(en3),
@@ -215,7 +215,7 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
                    .en15(en15));
   
     //Max_Block
-  max_q Max_Block(.clk(clk),
+  Max_Block Max_Block(.clk(clk),
                   .Q_Act1(out_ram_1),
                   .Q_Act2(out_ram_2),
                   .Q_Act3(out_ram_3),
@@ -235,7 +235,7 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
     
     //Q updater
 
-    Qupdater Qupdater(.old_Q(q_value_selected),
+    QUpdater Qupdater(.old_Q(q_value_selected),
                       .max_Q(q_max),
                       .gamma(gamma),
                       .alpha(alpha),
