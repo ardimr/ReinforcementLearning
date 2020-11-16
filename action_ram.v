@@ -20,11 +20,19 @@ module action_ram(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
       if(!en) begin
           data_out = 16'd0;
       end
-      else if (write_en) begin
+      else begin
+          data_out <= mem[rd_addr];
+      end
+       
+      if (write_en) begin
           mem[wr_addr] <= data_in;
       end
-      else begin //read mode
-          data_out <= mem[rd_addr]; 
+      else begin
+           //do nothing
       end
+
+      
+
+
   end
 endmodule
