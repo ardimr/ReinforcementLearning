@@ -30,9 +30,5 @@ module action_ram(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
       else begin
            //do nothing
       end
-
-      
-
-
   end
 endmodule
