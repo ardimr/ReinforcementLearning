@@ -1,15 +1,16 @@
 //Q-learning accelerator module
 
-module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha, result);
+module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, Q_new, Q_out_action);
   input clk,en;
   input[3:0] action;
   input [5:0] state;
   input [5:0] next_state; //size?
   input [15:0] reward; 
-  input [15:0] gamma;
-  input [15:0] alpha;
-  input [15:0] result;
-
+  input [3:0] gamma;
+  input [3:0] alpha;
+  input [15:0] Q_new;
+ 
+  output reg[63:0] Q_out_action;
   //wiring
   wire[15:0] out_ram_1, out_delay_1,
              out_ram_2, out_delay_2,
@@ -301,10 +302,16 @@ module Q_learning_acc(clk, en, action, state, next_state,  reward, gamma, alpha,
                       .gamma(gamma),
                       .alpha(alpha),
                       .rt(reward),
-                      .new_Q(result));
+                      .new_Q(Q_new));
+ 
 
     always@(posedge clk) begin
-      new_q_value <= result;
+      new_q_value <= Q_new;
+      Q_out_action[15:0] <= out_delay_1;
+      Q_out_action[31:16] <= out_delay_2;
+      Q_out_action[47:32] <= out_delay_3;
+      Q_out_action[63:48] <= out_delay_4;
+
     end
 
 endmodule
