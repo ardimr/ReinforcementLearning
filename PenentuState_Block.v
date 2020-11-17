@@ -7,49 +7,49 @@ module PenentuState_Block (
 	  case(at)
 	    //Geser Kanan
 	    4'b0000: begin 
-			            if(current_state%5 != 0)
-			                begin
+			if(current_state%5 != 0)
+			   begin
                         	next_state=current_state+1;
-			                end
-			            else
-			                begin
-                          next_state=current_state;
-			                end     
-		              end
+			   end
+			else
+			   begin
+                                next_state=current_state;
+			   end     
+		     end
 	    //Geser Atas
 	    4'b0001: begin 
-			            if(current_state > 5)
-			                begin
+			if(current_state > 5)
+			   begin
                         	next_state=current_state-5;
-			                end
-			            else
-			                begin
-                           next_state=current_state;
-			                end     
-		              end
+			   end
+			else
+			   begin
+                                next_state=current_state;
+			   end     
+		     end
 	    //Geser Kiri
-       4'b0010: begin 
-			             if(current_state%5 != 1)
-			                begin
+            4'b0010: begin 
+			if(current_state%5 != 1)
+			   begin
                         	next_state=current_state-1;
-			                end
-			             else
-			                begin
-                          next_state=current_state;
-			                end     
-		               end
-      //Geser Bawah
+			   end
+			else
+			   begin
+                                next_state=current_state;
+			   end     
+		     end
+            //Geser Bawah
 	    4'b0011: begin 
-			            if(current_state%5 < 21)
-			                begin
+			if(current_state%5 < 21)
+			   begin
                         	next_state=current_state+5;
-                      end
-			            else
-			                begin
-                          next_state=current_state;
-			                end     
-		              end
-	   default: begin next_state=current_state; end
+			   end
+			else
+			   begin
+                                next_state=current_state;
+			   end     
+		     end
+	    default: begin next_state=current_state; end
 	  endcase
   end
 endmodule
