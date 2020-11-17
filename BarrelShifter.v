@@ -12,3 +12,4 @@ module BarrelShifter(op, shift_mag, result);
   mux mux_instance4(shift_mag[3], mux3_out, (mux3_out >> 8), result);
   
 endmodule
+
