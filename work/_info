@@ -9,153 +9,368 @@ z2
 cModel Technology
 dE:/Kuliah/Semester 7/VLSI/Verilog/UTS/Matrix
 vaction_ram
-!s110 1604977358
+Z0 !s110 1605586299
 !i10b 1
-!s100 1zN=h@]AXH4PB;;l9WYK32
-I14;JY^_Z8O[B3EdomHhlU0
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 dE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning
-w1604977351
-8E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\action_ram.v
-FE:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\action_ram.v
+!s100 zCANVnalAWm;eR<:Qz_KY3
+IX8LNK7DZSD259?=CCWKFK3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning
+w1605586295
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram.v
 L0 2
-Z2 OV;L;10.6d;65
+Z3 OV;L;10.6d;65
 r1
 !s85 0
 31
-!s108 1604977358.000000
-!s107 E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\action_ram.v|
-!s90 -reportprogress|300|-work|work|-stats=none|E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\action_ram.v|
+Z4 !s108 1605586299.000000
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram.v|
 !i113 1
-Z3 o-work work
-Z4 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 vaction_ram_tb
-!s110 1604992529
+Z7 !s110 1605586300
 !i10b 1
 !s100 o9Q2cJBRiLB5lSQO[zKz83
 IFF0GVFD?0DglQhPLg3XB21
-R0
 R1
+R2
 w1604992518
 8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v
 FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v
 L0 3
-R2
+R3
 r1
 !s85 0
 31
-!s108 1604992529.000000
+Z8 !s108 1605586300.000000
 !s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v|
 !i113 1
-R3
-R4
+R5
+R6
 vBarrelShifter
-!s110 1604977527
+R0
 !i10b 1
 !s100 2Z<aB5A]Y5BOU;hnjdddI1
 I]5Ja>Mn0`;;^X5XmK_L?g0
-R0
 R1
-w1604945816
+R2
+w1605525233
 8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v
 FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v
 L0 1
-R2
+R3
 r1
 !s85 0
 31
-!s108 1604977527.000000
+R4
 !s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v|
 !i113 1
-R3
-R4
+R5
+R6
 n@barrel@shifter
 vDecoder
-!s110 1604983373
-!i10b 1
-!s100 k_ceT?aHjz5c2Y?l>88P;1
-I0o20gMdj=C=zZVi><e`K40
 R0
+!i10b 1
+!s100 4bJcdgYDN=QYAKIe[>Z1>0
+I`zQP5Hea?5YhX5nXMWY]h1
 R1
-w1604983370
+R2
+w1605521113
 8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v
 FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v
 L0 1
-R2
+R3
 r1
 !s85 0
 31
-!s108 1604983373.000000
+R4
 !s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v|
 !i113 1
-R3
-R4
+R5
+R6
 n@decoder
+vdecoder_tb
+R7
+!i10b 1
+!s100 hC:0i:U`K<?;EiJ^Ng8>g3
+IXc<_=5^7EQ6C8^0k9G<dg0
+R1
+R2
+w1605521127
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder_tb.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder_tb.v|
+!i113 1
+R5
+R6
+vDelay
+R7
+!i10b 1
+!s100 >D@0^d@eN?^on<TlCWSf=3
+IgDa;kScePgCJFoNdoCUJU0
+R1
+R2
+w1605533219
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/delay.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/delay.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/delay.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/delay.v|
+!i113 1
+R5
+R6
+n@delay
+vDelay_tb
+R7
+!i10b 1
+!s100 H>EYmId7nBC<:Om7PJL]81
+IUGfKAW3ALkNhKn:_]P6?f2
+R1
+R2
+w1605533293
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Delay_tb.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Delay_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Delay_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Delay_tb.v|
+!i113 1
+R5
+R6
+n@delay_tb
 vMax_Block
-!s110 1604977522
+R0
 !i10b 1
 !s100 =c17WUn1CCEc^HC^h4SK03
 I]SAMc^D43ENVLT;b[>^0]0
-R0
 R1
+R2
 w1604977057
 8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v
 FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v
 L0 3
-R2
+R3
 r1
 !s85 0
 31
-!s108 1604977522.000000
+R4
 !s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v|
 !i113 1
-R3
-R4
+R5
+R6
 n@max_@block
-vmultiplexer
-!s110 1604977514
+vmax_block_tb
+R7
 !i10b 1
-!s100 MjIIVS:4jKe2CiZ9<hDa_1
-I53DDTUbklc94PD<<g69<d3
-R0
+!s100 A:=a?HC4D6=0cLSH=Kai:2
+IemR:2EXaHPgSG1<MB@`m?3
 R1
-w1604977508
-8E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\multiplexer.v
-FE:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\multiplexer.v
-L0 3
 R2
+w1605518953
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block_tb.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block_tb.v
+L0 3
+R3
 r1
 !s85 0
 31
-!s108 1604977514.000000
-!s107 E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\multiplexer.v|
-!s90 -reportprogress|300|-work|work|-stats=none|E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\multiplexer.v|
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block_tb.v|
 !i113 1
-R3
-R4
-vQ_learning_acc
-!s110 1604983101
+R5
+R6
+vmaze_sover_tb
+R7
 !i10b 1
-!s100 iX9ASXj?e4QSb3<2bDK9;1
-I<aDdn<gmb46F;?B]7JE0L3
-R0
+!s100 B1K0U_O`hz3i25;ZBia3N0
+IMCO[3?YB=?eoU<enCWYJ31
 R1
-w1604983096
+R2
+w1605585995
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/maze_solver_tb.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/maze_solver_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/maze_solver_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/maze_solver_tb.v|
+!i113 1
+R5
+R6
+vmultiplexer
+!s110 1605522157
+!i10b 1
+!s100 MjIIVS:4jKe2CiZ9<hDa_1
+ImeAmNhooFnSGTVB:UPYlJ1
+R1
+R2
+w1604977508
+Z9 8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v
+Z10 FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1605522157.000000
+Z11 !s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v|
+Z12 !s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v|
+!i113 1
+R5
+R6
+vmux
+R7
+!i10b 1
+!s100 4>HKAPQ>LZg^@V`:9:kSb3
+ImF4Q`Cfz<=KYJ3PA@1Ob=3
+R1
+R2
+w1605525183
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/mux.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/mux.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/mux.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/mux.v|
+!i113 1
+R5
+R6
+vMux16to1
+R0
+!i10b 1
+!s100 :nh@_iJMkBVfaGog6`08=2
+IX:k_`J^D`nKYJ0j19`Gb[0
+R1
+R2
+w1605523806
+R9
+R10
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R11
+R12
+!i113 1
+R5
+R6
+n@mux16to1
+vMux16to1_tb
+R7
+!i10b 1
+!s100 AXXOio]kR82ZW47[lBBCN2
+I6_Viaa1@Fg8X90HzkD[fM0
+R1
+R2
+w1605523886
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer_tb.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer_tb.v|
+!i113 1
+R5
+R6
+n@mux16to1_tb
+vQ_learning_acc
+R0
+!i10b 1
+!s100 B3<9FAY[361X2]k?P=XRN2
+In@[AgVZoY<nNiHZo:PN^E0
+R1
+R2
+w1605586070
 8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v
 FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v
 L0 3
-R2
+R3
 r1
 !s85 0
 31
-!s108 1604983101.000000
+R4
 !s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v|
 !i113 1
-R3
-R4
+R5
+R6
 n@q_learning_acc
+vQUpdater
+R7
+!i10b 1
+!s100 e@LA<GRG6Y9Qb4Pe0G6A40
+Ibic^Cm41[db=X;Z>j<jZ<3
+R1
+R2
+w1604978417
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/QUpdater.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/QUpdater.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/QUpdater.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/QUpdater.v|
+!i113 1
+R5
+R6
+n@q@updater
+vtb_barrel
+R0
+!i10b 1
+!s100 oLISU^U8<lceIT]KMNXdl0
+I?QOD0cm^H?3lD2X3Vnfze3
+R1
+R2
+w1604945158
+8E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/tb_barrel.v
+FE:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/tb_barrel.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/tb_barrel.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/tb_barrel.v|
+!i113 1
+R5
+R6

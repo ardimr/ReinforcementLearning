@@ -1,9 +1,9 @@
-{E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v} {1 {vlog -work work -stats=none {E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\multiplexer.v}
+{E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer_tb.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer_tb.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module multiplexer
+-- Compiling module Mux16to1_tb
 
 Top level modules:
-	multiplexer
+	Mux16to1_tb
 
 } {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -12,19 +12,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	Max_Block
 
-} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v}
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module BarrelShifter
+-- Compiling module Q_learning_acc
 
 Top level modules:
-	BarrelShifter
-
-} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram.v} {1 {vlog -work work -stats=none {E:\Kuliah\Semester 7\VLSI\Okinawa Contest\Workspace\ReinforcementLearning\action_ram.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module action_ram
-
-Top level modules:
-	action_ram
+	Q_learning_acc
 
 } {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/action_ram_tb.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -33,6 +26,27 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	action_ram_tb
 
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder_tb.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module decoder_tb
+
+Top level modules:
+	decoder_tb
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/maze_solver_tb.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/maze_solver_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module maze_sover_tb
+
+Top level modules:
+	maze_sover_tb
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/BarrelShifter.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module BarrelShifter
+
+Top level modules:
+	BarrelShifter
+
 } {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Decoder.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module Decoder
@@ -40,11 +54,53 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	Decoder
 
-} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/q-learning_accelerator.v}
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/delay.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/delay.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module Q_learning_acc
+-- Compiling module Delay
 
 Top level modules:
-	Q_learning_acc
+	Delay
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/mux.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/mux.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/multiplexer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Mux16to1
+
+Top level modules:
+	Mux16to1
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Delay_tb.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Delay_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module Delay_tb
+
+Top level modules:
+	Delay_tb
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/tb_barrel.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/tb_barrel.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module tb_barrel
+
+Top level modules:
+	tb_barrel
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block_tb.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/Max_Block_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module max_block_tb
+
+Top level modules:
+	max_block_tb
+
+} {} {}} {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/QUpdater.v} {1 {vlog -work work -stats=none {E:/Kuliah/Semester 7/VLSI/Okinawa Contest/Workspace/ReinforcementLearning/QUpdater.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module QUpdater
+
+Top level modules:
+	QUpdater
 
 } {} {}}
