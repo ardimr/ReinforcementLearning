@@ -28,7 +28,7 @@ module action_ram(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
           mem[wr_addr] <= data_in;
       end
       else begin
-           //do nothing
+          mem[wr_addr] <= mem[wr_addr]; //do nothing
       end
   end
 endmodule
