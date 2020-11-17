@@ -4,8 +4,8 @@ module maze_sover_tb();
      //input Declaration
      reg clk = 1'b0;
      reg en = 1'b0;
-     reg action = 4'd0;
-     reg [5:0] state ;
+     reg [3:0] action = 4'd0;
+     reg [5:0] state;
      reg [5:0] next_state;
      reg signed [15:0] reward;
      reg [3:0] gamma;
@@ -60,6 +60,16 @@ module maze_sover_tb();
     initial begin
       #10;
       en = 1'b1;
+      state = 6'b000001;
+      next_state = 6'b000010;
+      alpha = 4'b1000;
+      gamma = 4'b1110;
+
+      #60;
+      state = 6'b000010;
+      next_state = 6'b000011;
+      action = 4'd1;
+
     end
 
     //display monitor
