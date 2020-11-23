@@ -1,6 +1,6 @@
 // Block Delay
 
-module Delay(clk, din,dout);
+module DelayActionRam(clk, din,dout);
   input clk;
   input [15:0] din;
   output reg [15:0] dout;
@@ -14,7 +14,7 @@ module Delay(clk, din,dout);
   end
 endmodule
 
-module Delay_action(clk,din,dout);
+module DelayAction(clk,din,dout);
   input clk;
   input [3:0] din;
   output reg [3:0] dout;
@@ -27,7 +27,7 @@ module Delay_action(clk,din,dout);
   end
 endmodule
 
-module Delay_state(clk,din,dout);
+module DelayState(clk,din,dout);
   input clk;
   input [5:0] din;
   output reg [3:0] dout;
