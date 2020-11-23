@@ -23,7 +23,7 @@ module Mux16to1(sel, d0, d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15, dou
       4'd13 : dout = d13;
       4'd14 : dout = d14;
       4'd15 : dout = d15;
-      default : dout = d0;
+      default : dout = d1;
     endcase
   end
   
