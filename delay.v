@@ -10,9 +10,7 @@ module Delay(clk, din,dout);
 
   always@(posedge clk) begin
       temp1 <= din;
-      temp2 <= temp1;
-      temp3  <= temp2;
-      dout <= temp3;
+      dout <= temp1;
   end
 endmodule
 
@@ -25,8 +23,7 @@ module Delay_action(clk,din,dout);
 
   always@(posedge clk) begin
       temp1 <= din;
-      temp2 <= temp1;
-      dout  <= temp2;
+      dout  <= temp1;
   end
 endmodule
 
@@ -39,7 +36,6 @@ module Delay_state(clk,din,dout);
 
   always@(posedge clk) begin
       temp1 <= din;
-      temp2 <= temp1;
-      dout  <= temp2;
+      dout  <= temp1;
   end
 endmodule
