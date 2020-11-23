@@ -1,10 +1,10 @@
 module StateSelector (
-	input [3:0] new_action,
+	input [3:0] next_action,
 	input [5:0] current_state,
 	output reg [5:0] next_state);
 
   always @(*) begin
-	  case(new_action)
+	  case(next_action)
 	    //Geser Kanan
 	    4'b0000: begin 
 			if(current_state%5 != 0)
