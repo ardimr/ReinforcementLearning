@@ -1,36 +1,34 @@
 //Module Q learning Agent
 
-module QLearningAgent (clk,en, reward, state, next_state);
+module QLearningAgent (clk, en, next_reward, current_state, next_state);
   input clk;
   input en;
-  input[15:0] reward;
-  input[5:0] state, next_state;
+  input[15:0] next_reward; // Reward
+  input[5:0] next_state; // Next State
 
   wire [63:0] w_q_values;
-  wire w_next_action;
+  wire w_next_reward;
   wire w_next_state;
-  wire w_curr_action;
+  wire w_curr_reward;
   wire w_curr_state;
 
  
   Q_learning_acc Q_learning_acc(.clk(clk), 
                     .en(en),
-                    .action(w_curr_action),
-                    .state(w_curr_state),
+                    .current_action(w_curr_action),
+                    .current_state(w_curr_state),
                     .next_state(w_next_state),
-                    .reward(reward),
-                    .Q_new(result),
-                    .Q_out_action(q_values));
+                    .current_reward(w_curr_reward),
+                    .Q_new(result), //Result?
+                    .Q_out_action(w_q_values));
 
    PG policy_generator(.clk(clk),
-                       .new_action(w_next_action),
-                       .q_values(q_values),
-                       .current_state(w_curr_state),
-                       .next_state(w_next_state));
+                       .next_action(w_next_action),
+                       .q_values(w_q_values));
     
-    Delay_action delay_action(.clk(clk),
-                              .din(w_next_action),
-                              .dout(w_curr_action));
+    Delay_reward delay_reward(.clk(clk),
+                              .din(w_next_reward),
+                              .dout(w_curr_reward));
     
     Delay_state delay_state(.clk(clk),
                             .din(w_next_state),
