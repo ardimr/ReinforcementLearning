@@ -10,7 +10,6 @@ module Delay(clk, din,dout);
 
   always@(posedge clk) begin
       temp1 <= din;
-      temp2 <= temp1;
       dout  <= temp2;
   end
 endmodule
