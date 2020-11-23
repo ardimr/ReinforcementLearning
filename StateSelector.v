@@ -1,10 +1,10 @@
-module PenentuState_Block (
-	input [3:0] at,
+module StateSelector (
+	input [3:0] new_action,
 	input [5:0] current_state,
 	output reg [5:0] next_state);
 
   always @(*) begin
-	  case(at)
+	  case(new_action)
 	    //Geser Kanan
 	    4'b0000: begin 
 			if(current_state%5 != 0)
