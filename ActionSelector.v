@@ -14,19 +14,19 @@ module ActionSelector (q_values, action);
   
   always @(*) begin
     if (q_values[15:0] == max_value) begin
-      next_action = 4'd3;
+      next_action = 4'd4;
     end
     else if (q_values[31:16] == max_value) begin
-      next_action = 4'd2;
+      next_action = 4'd3;
     end
     else if (q_values[47:32] == max_value) begin
-      next_action = 4'd1;
+      next_action = 4'd2;
     end
     else if (q_values[63:48] == max_value) begin
-      next_action = 4'd0;
+      next_action = 4'd1;
     end
     else begin
-      next_action = 4'd0;
+      next_action = 4'd1;
     end
   end
   
