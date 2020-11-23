@@ -1,18 +1,17 @@
-//Q-learning accelerator module
+// Q-Learning Accelerator
 
-module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, Q_new, Q_out_action);
-  input clk,en;
-  input[3:0] action;
-  input [5:0] state;
-  input [5:0] next_state; //size?
-  input [15:0] reward; 
-  input [3:0] gamma;
-  input [3:0] alpha;
-  input [15:0] Q_new;
+module QLearningAccelerator(clk, en, current_action, current_state, next_state, reward, Q_new, Q_out_action);
+	// Input and Output
+	input clk, en; // Control Signal
+	input[3:0] current_action; // Current Action
+	input [5:0] current_state; // Current State
+	input [5:0] next_state; //Next State
+	input signed [15:0] reward; // Current Reward
+	input [15:0] Q_new; // Updated Q Value
  
-  output reg[63:0] Q_out_action;
+	output reg[63:0] Q_out_action; // Q Values in Q Matrix of row equal to Current State
   //wiring
-  wire[15:0] out_ram_1, out_delay_1,
+	wire[15:0] out_ram_1, out_delay_1,
              out_ram_2, out_delay_2,
              out_ram_3, out_delay_3,
              out_ram_4, out_delay_4,
@@ -58,7 +57,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
   //module instantiation
     action_ram ram_1(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en1),
                    .data_in(new_q_value),
@@ -66,7 +65,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_2(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en2),
                    .data_in(new_q_value),
@@ -74,7 +73,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_3(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en3),
                    .data_in(new_q_value),
@@ -82,7 +81,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_4(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en4),
                    .data_in(new_q_value),
@@ -90,7 +89,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_5(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en5),
                    .data_in(new_q_value),
@@ -98,7 +97,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_6(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en6),
                    .data_in(new_q_value),
@@ -106,7 +105,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_7(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en7),
                    .data_in(new_q_value),
@@ -114,7 +113,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_8(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en8),
                    .data_in(new_q_value),
@@ -122,7 +121,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_9(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en9),
                    .data_in(new_q_value),
@@ -130,7 +129,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_10(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en10),
                    .data_in(new_q_value),
@@ -138,7 +137,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_11(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en11),
                    .data_in(new_q_value),
@@ -146,7 +145,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_12(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en12),
                    .data_in(new_q_value),
@@ -154,7 +153,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_13(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en13),
                    .data_in(new_q_value),
@@ -162,7 +161,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     action_ram ram_14(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en14),
                    .data_in(new_q_value),
@@ -170,7 +169,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
     
     action_ram ram_15(.clk(clk), 
                    .en(en), 
-                   .wr_addr(state),
+                   .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en15),
                    .data_in(new_q_value),
@@ -239,7 +238,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
 
     //multiplexer 16 to 1
-    Mux16to1 mux16to1(.sel(action),
+    Mux16to1 mux16to1(.sel(current_action),
                       .d1(out_delay_1),
                       .d2(out_delay_2),
                       .d3(out_delay_3),
@@ -259,7 +258,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
 //this is new
     //Decoder
-    Decoder Decoder(.at(action),
+    Decoder Decoder(.at(current_action),
                    .en1(en1),
                    .en2(en2),
                    .en3(en3),
@@ -299,9 +298,7 @@ module Q_learning_acc(clk, en, action, state, next_state, reward, gamma, alpha, 
 
     QUpdater Qupdater(.old_Q(q_value_selected),
                       .max_Q(q_max),
-                      .gamma(gamma),
-                      .alpha(alpha),
-                      .rt(reward),
+                      .reward(reward),
                       .new_Q(Q_new));
  
 
