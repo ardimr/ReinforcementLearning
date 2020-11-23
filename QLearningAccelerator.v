@@ -1,12 +1,12 @@
 // Q-Learning Accelerator
 
-module QLearningAccelerator(clk, en, current_action, current_state, next_state, reward, Q_new, Q_out_action);
+module QLearningAccelerator(clk, en, current_action, current_state, next_state, current_reward, Q_new, Q_out_action);
 	// Input and Output
 	input clk, en; // Control Signal
 	input[3:0] current_action; // Current Action
 	input [5:0] current_state; // Current State
 	input [5:0] next_state; //Next State
-	input signed [15:0] reward; // Current Reward
+	input signed [15:0] current_reward; // Current Reward
 	input [15:0] Q_new; // Updated Q Value
  
 	output reg[63:0] Q_out_action; // Q Values in Q Matrix of row equal to Current State
@@ -298,7 +298,7 @@ module QLearningAccelerator(clk, en, current_action, current_state, next_state, 
 
     QUpdater Qupdater(.old_Q(q_value_selected),
                       .max_Q(q_max),
-                      .reward(reward),
+		      .reward(current_reward),
                       .new_Q(Q_new));
  
 
