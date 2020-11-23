@@ -1,17 +1,19 @@
-module QUpdater (old_Q, max_Q, gamma, alpha, rt, new_Q);
+module QUpdater (old_Q, max_Q, reward, new_Q);
 	input [15:0] old_Q;
 	input [15:0] max_Q;
-	input [3:0] gamma;
-	input [15:0] rt;
-	input [3:0] alpha;
-	output [15:0] new_Q;
+	input [15:0] reward; // Current Reward
+	output [15:0] new_Q; // Updated Q value
 	
-	wire [15:0] shifted_max_Q;
+	wire [15:0] max_i;
+	wire [15:0] max_j;
+	wire [15:0] max_k;
 	wire [15:0] combined_Q;
 	
-	BarrelShifter barrel_gamma(max_Q, gamma, shifted_max_Q);
-	BarrelShifter barrel_alpha(combined_Q, alpha, new_Q);
+	BarrelShifter barrel_max_i(max_Q, 4'd1, max_i);
+	BarrelShifter barrel_max_j(max_Q, 4'd2, max_j);
+	BarrelShifter barrel_max_k(max_Q, 4'd3, max_k);
+	BarrelShifter barrel_alpha(combined_Q, 4'd1, new_Q);
 	
-	assign combined_Q = rt + shifted_max_Q - old_Q;
+	assign combined_Q = reward + max_i + max_j + max_k - old_Q;
 	
 endmodule
