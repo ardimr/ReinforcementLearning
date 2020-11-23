@@ -1,6 +1,6 @@
 module Decoder (
-	input [3:0] at,
-	output en1,en2,en3,en4,en5,en6,en7,en8,en9,en10,en11,en12,en13,en14,en15);
+	input [3:0] at, // Current Action
+	output en1,en2,en3,en4,en5,en6,en7,en8,en9,en10,en11,en12,en13,en14,en15); // Action Ram
 
 	reg [15:0] out;
 
@@ -21,7 +21,7 @@ module Decoder (
 	    4'd13: begin out=16'b0001000000000000; end
 	    4'd14: begin out=16'b0010000000000000; end
 	    4'd15: begin out=16'b0100000000000000; end
-	    default : begin out=16'b0000000000000000; end
+	    default : begin out=16'b0000000000000001; end
 	  endcase
   end
 
