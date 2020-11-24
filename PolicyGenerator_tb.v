@@ -22,7 +22,9 @@ module PolicyGenerator_tb();
 		q_values = 64'b0000000000001100000000000000000100000000000000100000000000000111;
 		epsilon = 16'b0000000011000000;
 		$display("epsilon = %f", $itor(epsilon)*2.0**-8.0);
-		#10;
+		#20;
+        q_values = 64'h0001100001000010;
+
 		$stop;
 	end
 	
