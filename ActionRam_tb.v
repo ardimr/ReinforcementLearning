@@ -1,6 +1,6 @@
 //Testbench Action RAM 
 `timescale 1 ns/10 ps  // time-unit = 1 ns, precision = 10 ps
-module action_ram_tb();
+module ActionRAM_tb();
      //input Declaration
      reg clk = 1'b0;
      reg en = 1'b0;
@@ -11,7 +11,7 @@ module action_ram_tb();
 
      wire [15:0] data_out;
      //port mapping
-    action_ram DUT(.clk(clk),
+    ActionRAM DUT(.clk(clk),
                  .en(en),
                  .write_en(write_en),
                  .wr_addr(wr_addr),
@@ -31,6 +31,7 @@ module action_ram_tb();
       #20;
       write_en = 1'b1;
       wr_addr = 6'd5;
+      rd_addr = 6'd5;
       data_in = 16'd5;
       #20;
       write_en = 1'b0;
@@ -38,6 +39,7 @@ module action_ram_tb();
       #20;
       write_en = 1'b1;
       wr_addr = 6'd1;
+      rd_addr = 6'd1;
       data_in = 16'd10;
       #20;
       write_en = 1'b0;

@@ -1,5 +1,5 @@
 //action ram
-module ActionRam(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
+module ActionRAM(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
   input clk;
   input en;
   input write_en;
