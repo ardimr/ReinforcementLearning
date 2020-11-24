@@ -18,7 +18,7 @@ module ControlUnit(clk,en,epsilon,goal,error);
 	         	   .current_state(w_current_state), 
 			   .next_state(w_next_state));
 
-  Q_LearningAgent Agent(.clk(clk),
+  QLearningAgent Agent(.clk(clk),
 			.en(en),
 			.reward(w_next_reward), 	
 			.next_state(w_next_state));
