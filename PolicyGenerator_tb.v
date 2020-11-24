@@ -5,9 +5,9 @@ module PolicyGenerator_tb();
     reg [15:0] epsilon;
     reg [63:0] q_values; // Q Values untuk 1 State
 
-	reg [3:0] action;
+	wire [3:0] action;
 	
-	PolicyGenerator policy_generator(.q_values(q_values), .epsilon(epsilon), .next_action(action));
+	PolicyGenerator policy_generator(.clk(clk), .q_values(q_values), .epsilon(epsilon), .current_action(action));
 
     //clock generator
     always begin
