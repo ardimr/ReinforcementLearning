@@ -65,7 +65,7 @@ module QLearningAccelerator(clk, en, current_action, current_state, next_state, 
                    .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en1),
-                   .data_in(Q_new),
+                   .data_in(w_Q_new),
                    .data_out(out_ram_1));
 
     ActionRAM ram_2(.clk(clk), 
@@ -73,7 +73,7 @@ module QLearningAccelerator(clk, en, current_action, current_state, next_state, 
                    .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en2),
-                   .data_in(Q_new),
+                   .data_in(w_Q_new),
                    .data_out(out_ram_2));               
 
     ActionRAM ram_3(.clk(clk), 
@@ -81,7 +81,7 @@ module QLearningAccelerator(clk, en, current_action, current_state, next_state, 
                    .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en3),
-                   .data_in(Q_new),
+                   .data_in(w_Q_new),
                    .data_out(out_ram_3));
 
     ActionRAM ram_4(.clk(clk), 
@@ -89,7 +89,7 @@ module QLearningAccelerator(clk, en, current_action, current_state, next_state, 
                    .wr_addr(current_state),
                    .rd_addr(next_state),
                    .write_en(en4),
-                   .data_in(Q_new),
+                   .data_in(w_Q_new),
                    .data_out(out_ram_4));
 
     ActionRAM ram_5(.clk(clk), 
