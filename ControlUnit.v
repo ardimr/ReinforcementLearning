@@ -25,8 +25,18 @@ module ControlUnit(clk,en,epsilon,goal,error);
 
   MazeMap Maze(.current_state(w_current_state)));
 	
-	if(w_current_state == 5'd25) begin
+	if(w_current_state == 6'd25) begin
 		goal=1'b1;
-		if(w_current_state == 
- 
+	end
+	else begin
+		goal=1'b0
+        end
+	if(w_current_state == 3 || w_current_state == 4 || w_current_state == 7 || w_current_state == 13 || w_current_state == 14 || w_current_state == 17 || 
+           w_current_state == 19 || w_current_state == 22) begin
+	        error =1'b1;
+	end
+	else begin
+	        error =1'b0;
+	end
+			
 endmodule
