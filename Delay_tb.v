@@ -5,7 +5,7 @@ module Delay_tb();
   reg [15:0] din;
   wire [15:0] dout;
 
-  Delay DUT(.clk(clk),
+  DelayActionRAM DUT(.clk(clk),
             .din(din),
             .dout(dout));
   //clock generator

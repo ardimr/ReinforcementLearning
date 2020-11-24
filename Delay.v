@@ -1,6 +1,6 @@
 // Block Delay
 
-module DelayActionRam(clk, din,dout);
+module DelayActionRAM(clk, din,dout);
   input clk;
   input [15:0] din;
   output reg [15:0] dout;
