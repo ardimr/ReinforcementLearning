@@ -3,8 +3,8 @@ module ControlUnit(clk,en,epsilon,goal,error);
   input clk;
   input en;
   input epsilon; 
-  input goal;
-  input error;
+  output goal;
+  output error;
 	
   wire [3:0] w_next_action;
   wire [15:0] w_next_reward;
@@ -25,6 +25,7 @@ module ControlUnit(clk,en,epsilon,goal,error);
 
   MazeMap Maze(.current_state(w_current_state)));
 	
+always@(*) begin
 	if(w_current_state == 6'd25) begin
 		goal=1'b1;
 	end
@@ -38,5 +39,6 @@ module ControlUnit(clk,en,epsilon,goal,error);
 	else begin
 	        error =1'b0;
 	end
+end
 			
 endmodule
