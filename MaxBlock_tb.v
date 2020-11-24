@@ -1,6 +1,6 @@
 //Testbench Max Blcok 
 `timescale 1 ns/10 ps  // time-unit = 1 ns, precision = 10 ps
-module max_block_tb();
+module MaxBlock_tb();
      //input Declaration
      reg clk = 1'b0;
      reg en = 1'b0;
@@ -23,7 +23,7 @@ module max_block_tb();
 
      wire[15:0] Q_max;
      //port mapping
-    Max_Block DUT(.clk(clk),
+    MaxBlock DUT(.clk(clk),
                  .Q_Act1(Q_Act1),
                  .Q_Act2(Q_Act2),
                  .Q_Act3(Q_Act3),

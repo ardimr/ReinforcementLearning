@@ -1,6 +1,6 @@
 //Model 1 register di akhir
 
-module Max_Block (
+module MaxBlock (
 	input [15:0] Q_Act1, 
         input [15:0] Q_Act2,
 	input [15:0] Q_Act3, 
