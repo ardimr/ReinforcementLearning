@@ -1,4 +1,4 @@
-module tb_action;
+module ActionSeletor_tb();
 	
 	reg [63:0] q_values;
 	reg [15:0] epsilon;
