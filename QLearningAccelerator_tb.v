@@ -72,7 +72,14 @@ module QLearningAccelerator_tb();
       //current_action = 4'd1;
 
       #20;
+      current_state = 6'd3;
+      next_state = 4'd8;
       current_action = 4'd1;
+
+      #20;
+      current_state = 4'd8;
+      next_state = 4'd3;
+      current_action = 4'd4; 
 
     end
 

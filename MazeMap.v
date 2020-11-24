@@ -20,6 +20,5 @@ module MazeMap(current_action, current_state);
                memory_map[15],memory_map[16],memory_map[17],memory_map[18],memory_map[19],
                memory_map[20],memory_map[21],memory_map[22],memory_map[23],memory_map[24]);
     end
-
 endmodule  
   

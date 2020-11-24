@@ -13,22 +13,21 @@ module QLearningAgent (clk, en, next_reward, current_state, next_state);
   wire w_curr_state;
 
  
-  Q_learning_acc Q_learning_acc(.clk(clk), 
+  QlearningAccelerator QLearningAccelerator(.clk(clk), 
                     .en(en),
                     .current_action(w_curr_action),
                     .current_state(w_curr_state),
                     .next_state(w_next_state),
                     .current_reward(w_curr_reward),
-                    .Q_new(result), //Result?
                     .Q_out_action(w_q_values));
 
-   PG policy_generator(.clk(clk),
-                       .next_action(w_next_action),
-                       .q_values(w_q_values));
+   PolicyGenerator PolicyGenerator(.clk(clk),
+                                   .next_action(w_next_action),
+                                   .q_values(w_q_values));
     
-    Delay_reward delay_reward(.clk(clk),
-                              .din(w_next_reward),
-                              .dout(w_curr_reward));
+    DelayReward DelayReward(.clk(clk),
+                            .din(w_next_reward),
+                            .dout(w_curr_reward));
     
     Delay_state delay_state(.clk(clk),
                             .din(w_next_state),
