@@ -11,7 +11,7 @@ module PolicyGenerator(clk, q_values, epsilon, current_action);
   //Delay Action
   always@(posedge clk)
      begin
-        current_action = w_current_action;
+        current_action <= w_current_action;
      end
   
 endmodule
