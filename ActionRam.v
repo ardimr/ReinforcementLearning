@@ -9,11 +9,13 @@ module ActionRAM(clk, en, wr_addr, rd_addr, write_en, data_in, data_out);
 
   output reg[15:0] data_out;
 
+  //File Name Parameter
+  parameter FILENAME = "memory_in.list";
   //Memory Model
   reg[15:0] mem[0:63];
 
   initial begin
-      $readmemh ("memory_in.list", mem);
+      $readmemh (FILENAME, mem);
   end
   
   always@(posedge clk) begin
