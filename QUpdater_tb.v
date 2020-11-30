@@ -12,7 +12,7 @@ module QUpdater_tb();
 	QUpdater q_updater(old_Q, max_Q, current_reward, new_Q);
 	
 	initial begin
-		old_Q = 16'b00000001_00000000; // 1
+		old_Q = 16'b00000010_00000000; // 2
 		max_Q = 16'b00000010_00000000; // 2
 		current_reward = 16'b00000111_00000000; //7
 		#10;
