@@ -7,8 +7,8 @@ module tb_random;
 	always begin
 		#10 clk = ~clk; //Clock dengan periode 20 time unit
 		if (clk) begin
-			$displayb(out[7:0]);
-			$display("Random Number = %f", $itor(out[7:0])*2.0**-8.0);
+			$displayb(out);
+			$display("Random Number = %f", $itor(out)*2.0**-8.0);
 		end
     end
 	

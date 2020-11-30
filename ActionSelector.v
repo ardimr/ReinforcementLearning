@@ -1,5 +1,6 @@
-module ActionSelector (q_values, epsilon, action);
+module ActionSelector (clk, start, q_values, epsilon, action);
   
+  input clk, start;
   input [63:0] q_values; // Values of Q_Table at row equal to current state
   input [15:0] epsilon; // epsilon = 1 - episode/301
   output reg [3:0] action; // action that will be taken
@@ -7,8 +8,11 @@ module ActionSelector (q_values, epsilon, action);
   wire [15:0] max_1;
   wire [15:0] max_2;
   wire [15:0] max_value;
-  reg [15:0] random = 16'b0000000000000000;
-  reg [15:0] random_value = 16'b0000000000000000;
+  wire [15:0] random;
+  wire [15:0] random_value;
+  
+  Randomizer randomizer_1 (16'b0011110011000011,start,clk,random);
+  Randomizer randomizer_2 (16'b1100001100111100,start,clk,random_value);
   
   assign max_1 = (q_values[15:0] >= q_values[31:16]) ? q_values[15:0] : q_values[31:16];
   assign max_2 = (q_values[47:32] >= q_values[63:48]) ? q_values[47:32] : q_values[63:48];
@@ -16,8 +20,7 @@ module ActionSelector (q_values, epsilon, action);
   
   
   always @(*) begin
-	random[7:0] = {$random} % 8;
-	random_value[7:0] = {$random} % 8;
+	
     if (epsilon <= random) begin
 		if (q_values[15:0] == max_value) begin
 			action = 4'd4;
