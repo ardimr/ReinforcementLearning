@@ -25,11 +25,11 @@ module QLearningAgent (clk, en, start, next_reward, next_state,epsilon,next_acti
                                             .Q_out_action(w_q_values));
 
    PolicyGenerator PolicyGenerator(.clk(clk),
-				                           .start(start),
+				   .start(start),
                                    .current_action(w_curr_action),
                                    .epsilon(epsilon),
                                    .q_values(w_q_values),
-				                           .next_action(next_action));
+				   .next_action(next_action));
     
     DelayReward DelayReward(.clk(clk),
                             .din(next_reward),
