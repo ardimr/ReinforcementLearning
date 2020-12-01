@@ -1,11 +1,14 @@
 //Module Q learning Agent
 
-module QLearningAgent (clk, en, next_reward, next_state);
+module QLearningAgent (clk, en, next_reward, next_state, action);
   input clk;
   input en;
-  input[15:0] next_reward; // Reward
-  input[5:0] next_state; // Next State
-
+  input start;
+  input [15:0] epsilon;
+  input [15:0] next_reward; // Reward
+  input [5:0] next_state; // Next State
+  output action; // Action that will be taken from Policy
+  
   wire [63:0] w_q_values;
   //wire w_next_reward;
   //wire w_next_state;
@@ -13,7 +16,6 @@ module QLearningAgent (clk, en, next_reward, next_state);
   wire [5:0] w_curr_state;
   wire [3:0] w_curr_action;
 
-  reg [15:0] epsilon = 16'b0000000011100000;
   QLearningAccelerator QLearningAccelerator(.clk(clk), 
                                             .en(en),
                                             .current_action(w_curr_action),
@@ -22,7 +24,7 @@ module QLearningAgent (clk, en, next_reward, next_state);
                                             .current_reward(w_curr_reward),
                                             .Q_out_action(w_q_values));
 
-   PolicyGenerator PolicyGenerator(.clk(clk),
+  PolicyGenerator PolicyGenerator(.clk(clk), .start(start)
                                    .current_action(w_curr_action),
                                    .epsilon(epsilon),
                                    .q_values(w_q_values));
@@ -34,5 +36,7 @@ module QLearningAgent (clk, en, next_reward, next_state);
     DelayState DelayState(.clk(clk),
                             .din(next_state),
                             .dout(w_curr_state));
-
+    
+  
+    assign action = w_curr_action;
 endmodule
