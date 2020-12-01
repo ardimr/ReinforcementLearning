@@ -1,6 +1,6 @@
 //Module Q learning Agent
 
-module QLearningAgent (clk, en, next_reward, next_state, action);
+module QLearningAgent (clk, en, next_reward, next_state, next_action);
   input clk;
   input en;
   input start;
