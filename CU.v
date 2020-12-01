@@ -21,7 +21,6 @@ module ControlUnit(clk,enb,epsilon,next_action,current_st,episode,fail,finish,pr
   reg [1:0] next_condition = 2'b00;
   reg [5:0] counter;
  
-  //current_condition = 2'b00;
 
   RewardGenerator Reward(.next_state(next_state),
                         .next_reward(w_next_reward));
@@ -46,7 +45,6 @@ always@(*) begin
 	   //State Start
 	   current_state=6'd1;
 	   current_st=6'd1;
-	   //next_state=6'd1;
 	   start=1'b1;
 	   en=1'b1;
 	   print=1'b1;
@@ -86,7 +84,7 @@ always@(*) begin
 	else if (counter > 5'd14) begin
 		next_condition=2'b00;
 	end
-	else if (episode == 9'd256) begin
+	else if (episode == 10'd256) begin
 		next_condition=2'b11;
 	end
 	else if (current_condition == 2'b00) begin
@@ -103,14 +101,13 @@ always@(posedge clk) begin
 
 	if (enb == 1'b1) begin
 	current_condition<=2'b00;
-	episode=4'd0;
+	episode=10'd0;
 	end
 	else if (current_condition == 2'b01) begin
 		counter=counter+1;
 	end
 	else if (current_condition == 2'b00) begin
 		episode= episode+1;
-		//current_state=6'd1;
 	end
 
 end		
