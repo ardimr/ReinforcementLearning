@@ -86,7 +86,7 @@ always@(*) begin
 	else if (counter > 5'd14) begin
 		next_condition=2'b00;
 	end
-	else if (episode == 9'd300) begin
+	else if (episode == 9'd256) begin
 		next_condition=2'b11;
 	end
 	else if (current_condition == 2'b00) begin
