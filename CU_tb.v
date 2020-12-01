@@ -3,7 +3,7 @@ module ControlUnit_tb();
      //input Declaration
      reg clk = 1'b1;
      reg enb = 1'b1;
-     reg [15:0] epsilon = 15'd0;
+     reg [15:0] epsilon;
      reg [3:0] next_action ;
      
      wire [9:0] episode;
@@ -11,6 +11,7 @@ module ControlUnit_tb();
      wire finish;
      wire print;
      wire [5:0] current_st;
+     wire [35:0] step;  
     //  reg [3:0] gamma;
     //  reg [3:0] alpha;
 
@@ -43,10 +44,11 @@ module ControlUnit_tb();
     #10 clk = ~clk; //Clock dengan periode 20 time unit
     end
     
+assign step = ({episode, 8'b00000000}) * 18'b000000000000000001;
+
     
     initial begin
       #20;
-	epsilon=16'b0000000011111111;
       //next_reward = 16'b00000111_00000000; //7
       enb = 1'b0;
       next_action = 4'b0000; 
@@ -111,7 +113,7 @@ module ControlUnit_tb();
     end
 
     always@(episode) begin
-    	epsilon=epsilon-1;
+    	epsilon = 16'b0000000100000000 - (step[23:8]);
     end
   //display monitor
     always@(negedge clk) begin
