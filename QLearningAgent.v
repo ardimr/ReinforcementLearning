@@ -7,7 +7,7 @@ module QLearningAgent (clk, en, next_reward, next_state, action);
   input [15:0] epsilon;
   input [15:0] next_reward; // Reward
   input [5:0] next_state; // Next State
-  output action; // Action that will be taken from Policy
+  output next_action; // Action that will be taken from Policy
   
   wire [63:0] w_q_values;
   //wire w_next_reward;
@@ -38,5 +38,5 @@ module QLearningAgent (clk, en, next_reward, next_state, action);
                             .dout(w_curr_state));
     
   
-    assign action = w_curr_action;
+    assign next_action = w_curr_action;
 endmodule
