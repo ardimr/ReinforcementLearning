@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1607945316 source:d:\kuliah\reinforcement learning\action.c
+	<stdio.h>
+	<stdlib.h>
+	"utility.h"
+
+1607841652 source:d:\kuliah\reinforcement learning\display.c
+	<stdio.h>
+
+1607881686 source:d:\kuliah\reinforcement learning\updater.c
+	"utility.h"
+
+1607945579 source:d:\kuliah\reinforcement learning\routing.c
+	<stdio.h>
+	"utility.h"
+
+1607945395 source:d:\kuliah\reinforcement learning\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"action.h"
+	"display.h"
+	"routing.h"
+	"updater.h"
+
+1607875773 d:\kuliah\reinforcement learning\utility.h
+
+1607875705 source:d:\kuliah\reinforcement learning\utility.c
+
+1607873606 d:\kuliah\reinforcement learning\action.h
+
+1607873618 d:\kuliah\reinforcement learning\display.h
+
+1607873772 d:\kuliah\reinforcement learning\routing.h
+
+1607876483 d:\kuliah\reinforcement learning\updater.h
+
+1607957651 source:d:\kuliah\electrical power\display.c
+	<stdio.h>
+
+1607957791 source:d:\kuliah\electrical power\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"action.h"
+	"display.h"
+	"routing.h"
+	"updater.h"
+
+1607955757 d:\kuliah\electrical power\action.h
+
+1607955922 d:\kuliah\electrical power\display.h
+
+1607957165 d:\kuliah\electrical power\routing.h
+
+1607957210 d:\kuliah\electrical power\updater.h
+
+1607957160 source:d:\kuliah\electrical power\routing.c
+	<stdio.h>
+	"utility.h"
+
+1607957508 d:\kuliah\electrical power\utility.h
+
+1607958313 source:d:\kuliah\electrical power\action.c
+	<stdio.h>
+	<stdlib.h>
+	"utility.h"
+
+1607957551 source:d:\kuliah\electrical power\utility.c
+	<stdio.h>
+	<stdlib.h>
+
+1607958403 source:d:\kuliah\electrical power\updater.c
+	"utility.h"
+	<stdio.h>
+
