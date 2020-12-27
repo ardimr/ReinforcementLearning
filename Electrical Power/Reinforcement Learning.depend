@@ -38,7 +38,7 @@
 1607957651 source:d:\kuliah\electrical power\display.c
 	<stdio.h>
 
-1607957791 source:d:\kuliah\electrical power\main.c
+1609076256 source:d:\kuliah\electrical power\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -51,26 +51,26 @@
 
 1607955922 d:\kuliah\electrical power\display.h
 
-1607957165 d:\kuliah\electrical power\routing.h
+1609054566 d:\kuliah\electrical power\routing.h
 
 1607957210 d:\kuliah\electrical power\updater.h
 
-1607957160 source:d:\kuliah\electrical power\routing.c
+1609076074 source:d:\kuliah\electrical power\routing.c
 	<stdio.h>
 	"utility.h"
 
-1607957508 d:\kuliah\electrical power\utility.h
+1609065812 d:\kuliah\electrical power\utility.h
 
-1607958313 source:d:\kuliah\electrical power\action.c
+1607958515 source:d:\kuliah\electrical power\action.c
 	<stdio.h>
 	<stdlib.h>
 	"utility.h"
 
-1607957551 source:d:\kuliah\electrical power\utility.c
+1609065895 source:d:\kuliah\electrical power\utility.c
 	<stdio.h>
-	<stdlib.h>
+	<math.h>
 
-1607958403 source:d:\kuliah\electrical power\updater.c
+1609054363 source:d:\kuliah\electrical power\updater.c
 	"utility.h"
 	<stdio.h>
 

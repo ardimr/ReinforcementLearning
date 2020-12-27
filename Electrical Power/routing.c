@@ -1,79 +1,36 @@
-/*
 #include <stdio.h>
 #include "utility.h"
 
-void display_routing (double q_table[25][4])
+void display_routing (double q_table[25][15])
 {
     int state = 0;
     int i;
-    double max_value;
+    double max_value_index[2];
+
     printf("Routing\n");
     for (i = 0; i < 25; i++)
     {
-        if (state == 4 || state == 6 || state == 7 || state == 13 || state == 16 || state == 18 || state == 19 || state == 21)
+        if (state == 19 || state == 20 || state == 21)
         {
-            printf("Error Obstacle\n");
+            printf("Normal Zone\n");
             break;
         }
-        if (state == 24)
+        else
         {
-            printf("State %d Goal!\n", state);
-            break;
-        }
-        printf("State %d \n", state);
-        max_value = max(max(q_table[state][0], q_table[state][1]),max(q_table[state][2], q_table[state][3]));
-        if (q_table[state][0] == max_value)
-        {
-            if (state % 5 < 4)
+            if (state < 16)
             {
-                state += 1;
-                //printf("Routing %d | State %d\n", i, state);
+                printf("Warning! Diverged Zone\n");
             }
             else
             {
-                printf("Error Illegal Move Action 1\n");
-                break;
+                printf("Caution! Violation Zone\n");
             }
         }
-        else if (q_table[state][1] == max_value)
-        {
-            if (state > 4)
-            {
-                state -= 5;
-                //printf("Routing %d | State %d\n", i, state);
-            }
-            else
-            {
-                printf("Error Illegal Move Action 2\n");
-                break;
-            }
-        }
-        else if (q_table[state][2] == max_value)
-        {
-            if (state > 0)
-            {
-                state -= 1;
-                //printf("Routing %d | State %d\n", i, state);
-            }
-            else
-            {
-                printf("Error Illegal Move Action 3\n");
-                break;
-            }
-        }
-        else if (q_table[state][3] == max_value)
-        {
-            if (state < 20)
-            {
-                state += 5;
-                //printf("Routing %d | State %d\n", i, state);
-            }
-            else
-            {
-                printf("Error Illegal Move Action 4\n");
-                break;
-            }
-        }
+        printf("Old State %d \n", state);
+        max_value(state, q_table, max_value_index);
+        state = get_state(get_result((int) max_value_index[1]));
+        printf("New State %d | Action Taken %d\n", state, (int) max_value_index[1]);
+        print_description((int) max_value_index[1]);
     }
     if (i == 24)
     {
@@ -83,4 +40,4 @@ void display_routing (double q_table[25][4])
     printf(" \n");
 }
 
-*/
+
