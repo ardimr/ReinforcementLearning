@@ -133,7 +133,7 @@ module ControlUnit_tb();
     end
 
     always@(episode) begin
-    	epsilon=1-episode/300;
+    	epsilon=256-episode;
     end
   //display monitor
     always@(negedge clk) begin

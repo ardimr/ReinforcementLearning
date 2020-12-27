@@ -1,11 +1,12 @@
 //Module Q learning Agent
 
-module QLearningAgent (clk, en, start, next_reward, next_state,epsilon,next_action);
+module QLearningAgent (clk, en, start, next_reward, current_state, next_state,epsilon,next_action);
   input clk;
   input en;
   input start;
   input[15:0] next_reward; // Reward
   input[5:0] next_state; // Next State
+  input[5:0] current_state;
   input[15:0] epsilon; 
   output [3:0] next_action;
 
@@ -21,7 +22,7 @@ module QLearningAgent (clk, en, start, next_reward, next_state,epsilon,next_acti
   QLearningAccelerator QLearningAccelerator(.clk(clk), 
                                             .en(en),
                                             .current_action(w_curr_action),
-                                            .current_state(w_curr_state),
+                                            .current_state(current_state),
                                             .next_state(next_state),
                                             .current_reward(w_curr_reward),
                                             .Q_out_action(w_q_values));
@@ -37,8 +38,4 @@ module QLearningAgent (clk, en, start, next_reward, next_state,epsilon,next_acti
                             .din(next_reward),
                             .dout(w_curr_reward));
  
-    DelayState DelayState(.clk(clk),
-                            .din(next_state),
-                            .dout(w_curr_state));
-
-endmodule
+  endmodule

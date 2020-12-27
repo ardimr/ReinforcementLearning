@@ -44,7 +44,7 @@ module ActionSelector (clk, start, q_values, epsilon, action);
   if((max_1[15] == 1'b1)&&(max_2[15] == 1'b0)) begin
 	max_value=max_2[14:0];
   end
-  else if((q_values[47] == 1'b0)&&(q_values[63] == 1'b1)) begin
+  else if((max_1[15] == 1'b0)&&(max_2[15] == 1'b1)) begin
 	max_value=max_1[14:0];
   end
   else begin 
@@ -53,16 +53,16 @@ module ActionSelector (clk, start, q_values, epsilon, action);
 
     if (epsilon <= random) begin
 		if (q_values[14:0] == max_value) begin
-			action = 4'd4;
+			action = 4'd1;
 		end
 		else if (q_values[30:16] == max_value) begin
-			action = 4'd3;
-		end
-		else if (q_values[46:32] == max_value) begin
 			action = 4'd2;
 		end
+		else if (q_values[46:32] == max_value) begin
+			action = 4'd3;
+		end
 		else if (q_values[62:48] == max_value) begin
-			action = 4'd1;
+			action = 4'd4;
 		end
 		else begin
 			action = 4'd1;

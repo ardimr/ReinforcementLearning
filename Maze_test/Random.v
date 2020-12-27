@@ -21,7 +21,7 @@ module Randomizer(ic,start,clk,q); // main module for lfsr
   dff dff14(lfs[2],start?ic[2]:lfs[3],clk);
   dff dff15(lfs[1],start?ic[1]:lfs[2],clk);
   dff dff16(lfs[0],start?ic[0]:lfs[1],clk);
-  assign q=lfs;
+  assign q = {8'b00000000, lfs[7:0]};
 endmodule
 
 module dff (Q, D, Clock); //sub module- d flip flop
